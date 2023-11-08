@@ -16,6 +16,12 @@ const skillsName = [
     "git & github",
     "mongoDB",
     "aws"
+];
+const certificateName = [
+    "컴퓨터활용능력 1급",
+    "GTQ 그래픽기술자격 1급",
+    "IoT지식능력검정",
+    "SQLD"
 ]
 
 export default function Skills() {
@@ -52,16 +58,15 @@ export default function Skills() {
         if(pill) {
             for (let i = 0; i < pillsRef.current.length; i++) {
                 gsap.to(pillsRef.current[i], {
-                    duration: 1.3,
+                    duration: 1,
                     opacity: 1,
-                    delay: Math.random() * 1,
+                    delay: i * 0.2,
                     ease: "power3.inOut",
                 });
             }
         }
         return () => window.removeEventListener('scroll', tween)
     })
-
     
     
     return(
@@ -74,8 +79,22 @@ export default function Skills() {
                         <div className="flex align-center justify-left flex-wrap gap-2 mt-[30px] px-12">
                             {skillsName.map((data,index)=>(
                                 <div key={index}
-                                    className="bg-black py-2 px-4 opacity-80 text-white rounded-[30px] opacity-0"
+                                    className="bg-black py-2 px-4 opacity-0 text-white rounded-[30px]"
                                     ref={e => pillsRef.current[index] = e}
+                                >
+                                    {data}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="text-3xl text-left pt-36 text-white pl-12">CERTIFICATE</div>
+                    <div>
+                        {/* *자격증부분 */}
+                        <div className="flex align-center justify-left flex-wrap gap-2 mt-[30px] px-12">
+                            {certificateName.map((data,index)=>(
+                                <div key={index}
+                                    className="bg-black py-2 px-4 opacity-0 text-white rounded-[30px]"
+                                    ref={e => pillsRef.current[index+11] = e}
                                 >
                                     {data}
                                 </div>
