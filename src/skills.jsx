@@ -23,7 +23,7 @@ export default function Skills() {
     // const [top, setTop] = useState(0);
     const pillsRef = useRef([]);
     const containerRef = useRef();
-    
+    const [pill, setPill] = useState(false);
     // const distanceChildFromTop = () => {
     //     if(scrollTopRef.current) {
     //         let skillsTop = scrollTopRef.current.getBoundingClientRect().top + window.pageYOffset;
@@ -34,23 +34,34 @@ export default function Skills() {
     // useEffect(() => {
     //     window.addEventListener("scroll", distanceChildFromTop);
     // }, [distanceChildFromTop]);
+    
     let scrollY;
-    window.addEventListener('scroll', () => {
-        scrollY = window.scrollY;
-        tween()
-    })
-    const tween = () => {
-        if (scrollY > containerRef.current?.offsetTop ) {
-            for (let i = 0; i < pillsRef.current?.length; i++) {
-                gsap.from( pillsRef.current[i], {
+    useEffect(() => {
+        const tween = () => {
+            window.addEventListener('scroll', ()=>{
+                scrollY = window.scrollY;
+                // console.log(scrollY)
+                // console.log(containerRef.current.offsetTop)
+                if (scrollY > containerRef.current.offsetTop - 50) {
+                    // console.log(1)
+                    setPill(true);
+                }
+            })
+        }
+        tween();
+        if(pill) {
+            for (let i = 0; i < pillsRef.current.length; i++) {
+                gsap.to(pillsRef.current[i], {
                     duration: 1.3,
-                    opacity: 0,
-                    delay: Math.random() * 1.5,
+                    opacity: 1,
+                    delay: Math.random() * 1,
                     ease: "power3.inOut",
                 });
             }
         }
-    }
+        return () => window.removeEventListener('scroll', tween)
+    })
+
     
     
     return(
@@ -63,7 +74,7 @@ export default function Skills() {
                         <div className="flex align-center justify-left flex-wrap gap-2 mt-[30px] px-12">
                             {skillsName.map((data,index)=>(
                                 <div key={index}
-                                    className="bg-black py-2 px-4 opacity-80 text-white rounded-[30px]"
+                                    className="bg-black py-2 px-4 opacity-80 text-white rounded-[30px] opacity-0"
                                     ref={e => pillsRef.current[index] = e}
                                 >
                                     {data}
@@ -110,7 +121,7 @@ export default function Skills() {
                         </div>
                         <ul className="text-xl mt-6 leading-loose text-[#ffffff]">
                             <li>Virtual DOM을 이해하고 있습니다.</li>
-                            <li>Redux, Redux saga와 같은 상태관리 라이브러리를 사용할 수 있습니다.</li>
+                            <li>Redux, Redux saga와 같은 상태관리 라이브러리를 사용할 수 있으며. recoil과 contextAPI와의 차이점을 인지합니다.</li>
                             <li>Next.js를 이용한 SSR개발 경험이 있습니다.</li>
                             <li>React의 Hooks을 사용할 수 있습니다.</li>
                             <li>Graphql을 사용할 수 있습니다.</li>
