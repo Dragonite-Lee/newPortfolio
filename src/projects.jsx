@@ -56,7 +56,7 @@ export default function Project() {
     handleResize()
     useEffect(() => {
         
-        console.log(windowHeight,windowWidth)
+        // console.log(windowHeight,windowWidth)
         const tween = () => {
             window.addEventListener('scroll', ()=>{
                 scrollY = window.scrollY;
@@ -97,7 +97,7 @@ export default function Project() {
                 <div className="w-full h-[calc(100vh-4rem-132px)]">
                     {
                         activity_arr.map((data, index) => (
-                            <div className="text-white bg-slate-700 opacity-0 px-2 w-48 h-64 bg-white absolute top-0 left-0 rounded-[15px]" key={data.id}
+                            <div className="text-white bg-slate-700 opacity-0 px-2 w-48 h-64 absolute top-0 left-0 rounded-[15px]" key={data.id}
                                 ref={e => boxesRef.current[index] = e}
                             >
                                 <div className="mt-2 text-center">
