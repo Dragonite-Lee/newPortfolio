@@ -33,7 +33,7 @@ export default function WhoAmI() {
             <div className="md:flex text-center justify-center items-center sticky top-[4rem] bg-[#1B2735]">
                 <div className="w-1/2"  ref={scrollopacity}>
                     <img 
-                        className="block mx-auto w-3/4 h-auto rounded-md"
+                        className="block mx-auto w-2/4 h-2/4 rounded-md"
                         src={myImg}
                         alt="myImg"
                         
@@ -63,7 +63,7 @@ export default function WhoAmI() {
                 </div>
             </div>
             <div className="md:flex text-center justify-center items-center">
-                <div className="bg-[#1B2735] w-1/2 h-[calc(100vh-4rem)] text-NanumSquareNeo-Variable text-[60px] text-white">
+                <div className="bg-[#1B2735] w-1/2 h-[calc(100vh)] text-NanumSquareNeo-Variable text-[60px] text-white">
                     <div className="relative top-2/4 translate-y-[-50%] text-left px-[10%]">
                         <span>
                             FRONT-END<br />
@@ -72,7 +72,7 @@ export default function WhoAmI() {
                         </span>
                     </div>
                 </div>
-                <div className="relative bg-[#1B2735] w-1/2 h-[calc(100vh-4rem)] text-white text-center text-[18px]">
+                <div className="relative bg-[#1B2735] w-1/2 h-[calc(100vh)] text-white text-center text-[18px]">
                     <div className="text-left px-[10%] absolute top-2/4 translate-y-[-50%]">
                         <div className="mb-4">
                             <span className="font-bold text-[20px]">FrontEnd</span>를 공부하며 바닥에 차곡차곡 쌓이는 눈처럼<br />
@@ -87,12 +87,12 @@ export default function WhoAmI() {
                         시야를 넓히려고 노력중입니다. 
                     </div>
                     <img 
-                        className="absolute bottom-0 opacity-80"
+                        className="block absolute bottom-0 opacity-80"
                         src={snowBg}
                         alt="snowBg이미지"
                     />
                     <img 
-                        className="absolute bottom-0"
+                        className="block absolute bottom-0"
                         src={star}
                         alt="star이미지"
                     />

@@ -114,7 +114,7 @@ export default function Skills() {
                         <div className="text-3xl text-[#502924]">
                             html & css
                         </div>
-                        <ul className="text-xl mt-6 leading-loose text-[#161F29]">
+                        <ul className="text-base mt-6 leading-loose text-[#161F29]">
                             <li>HTML 웹 표준을 지키려 노력합니다.</li>
                             <li>styled component & css-module를 사용할 수 있습니다.</li>
                             <li>scss를 사용할 수 있습니다.</li>
@@ -127,7 +127,7 @@ export default function Skills() {
                         <div className="text-3xl text-[#502924]">
                             javascript
                         </div>
-                        <ul className="text-xl mt-6 leading-loose text-[#161F29]">
+                        <ul className="text-base mt-6 leading-loose text-[#161F29]">
                             <li>Javascript ES6 문법에 익숙합니다.</li>
                             <li>Typescript를 사용할 수 있습니다.</li>
                             <li>Webpack과 gulp같은 번들러를 사용할 수 있습니다.</li>
@@ -138,7 +138,7 @@ export default function Skills() {
                         <div className="text-3xl text-[#C4CDD1]">
                             react
                         </div>
-                        <ul className="text-xl mt-6 leading-loose text-[#ffffff]">
+                        <ul className="text-base mt-6 leading-loose text-[#ffffff]">
                             <li>Virtual DOM을 이해하고 있습니다.</li>
                             <li>Redux, Redux saga와 같은 상태관리 라이브러리를 사용할 수 있으며. recoil과 contextAPI와의 차이점을 인지합니다.</li>
                             <li>Next.js를 이용한 SSR개발 경험이 있습니다.</li>
@@ -150,7 +150,7 @@ export default function Skills() {
                         <div className="text-3xl text-[#C4CDD1]">
                             git & github
                         </div>
-                        <ul className="text-xl mt-6 leading-loose text-[#ffffff]">
+                        <ul className="text-base mt-6 leading-loose text-[#ffffff]">
                             <li>Git flow를 이해하고, main-develop-기능별 브랜치를 이용한 개발 경험이 있습니다.</li>
                             <li>Github Pull request를 이용해 코드 리뷰를 진행한 협력경험이 있습니다.</li>
                             <li>Github Actions으로 workflow를 자동화한 경험이 있습니다.</li>
