@@ -42,15 +42,17 @@ export default function Project() {
     const handleResize = () => {
         windowHeight = window.innerHeight;
         windowWidth = window.innerWidth;
-        for (let i = 0; i < boxesRef.current.length; i++) {
-            gsap.to(boxesRef.current[i], {
-                opacity: 1,
-                duration: 1,  
-                delay: i * 0.2,
-                ease: "power3.inOut",
-                y: windowHeight / 2 - 100,
-                x: windowWidth / 2 - (i * 200 - 200)
-            });
+        if(boxes) {
+            for (let i = 0; i < boxesRef.current.length; i++) {
+                gsap.to(boxesRef.current[i], {
+                    opacity: 1,
+                    duration: 1,  
+                    delay: i * 0.2,
+                    ease: "power3.inOut",
+                    y: windowHeight / 2 - 100,
+                    x: windowWidth / 2 - (i * 200 - 200)
+                });
+            }
         }
     }
     handleResize()
