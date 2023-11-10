@@ -140,7 +140,7 @@ export default function Skills() {
                         </div>
                         <ul className="text-base mt-6 leading-loose text-[#ffffff]">
                             <li>Virtual DOM을 이해하고 있습니다.</li>
-                            <li>Redux, Redux saga와 같은 상태관리 라이브러리를 사용할 수 있으며. recoil과 contextAPI와의 차이점을 인지합니다.</li>
+                            <li>Redux, Redux saga와 같은 상태관리 라이브러리를 사용할 수 있으며, recoil과 contextAPI와의 차이점을 인지합니다.</li>
                             <li>Next.js를 이용한 SSR개발 경험이 있습니다.</li>
                             <li>React의 Hooks을 사용할 수 있습니다.</li>
                             <li>Graphql을 사용할 수 있습니다.</li>
